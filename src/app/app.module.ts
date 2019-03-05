@@ -8,13 +8,15 @@ import { RegComponent } from './reg/reg.component';
 import { from } from 'rxjs';
 import { SignComponent } from './sign/sign.component';
 import { CompleteListComponent } from './complete-list/complete-list.component';
+import { EditingComponent } from './editing/editing.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegComponent,
     SignComponent,
-    CompleteListComponent
+    CompleteListComponent,
+    EditingComponent
   ],
   imports: [
     BrowserModule,

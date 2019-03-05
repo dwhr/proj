@@ -14,7 +14,7 @@ export class RegComponent implements OnInit {
  hold:model;
  regForm: FormGroup;
   constructor(private fb:FormBuilder,private rs:RegService,private activatedroute:ActivatedRoute,
-    private cs:CompleteListService) { }
+    private cs:CompleteListService,private router:Router) { }
 onSubmit()
 {
   this.hold=new model();
@@ -33,10 +33,12 @@ onSubmit()
       email:[''],
       password:['']
     })
+    /* this.opendisp(); */
   }
   opendisp(){
-    this.cs.getcompletelist();
-    console.log('working');
+    /* this.cs.getcompletelist(); */
+   this.router.navigate(['list']);
+   /*  console.log('working'); */
   }
 
 }

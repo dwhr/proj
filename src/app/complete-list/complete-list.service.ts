@@ -8,21 +8,21 @@ import { Observable } from 'rxjs';
 })
 export class CompleteListService {
   baseurl=environment.ServiceUrl;
-  url:any;
+  /* url:any; */
   constructor(private http:HttpClient) { }
 
   getcompletelist():Observable<model>{
-   var url=this.baseurl+'/display';
-    return this.http.get<model>(this.url);
+   const url=this.baseurl+'/display';
+    return this.http.get<model>(url);
   }
-  editingList(_id):Observable<model>{
+ /*  editingList(_id):Observable<model>{
    var url=this.baseurl+'/edit';
-    return this.http.put<model>(this.url,_id);
-  }
+    return this.http.put<model>(url,_id);
+  } */
 
   deleteList(_id):Observable<model>{
-    var url=this.baseurl+'/delete';
-    return this.http.delete<model>(this.url);
+    var url=this.baseurl+'/delete'+'/'+_id;
+    return this.http.delete<model>(url);
   }
 
 }
