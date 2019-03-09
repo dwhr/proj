@@ -1,6 +1,6 @@
 export class model{
-    name:string;
-    phone:number;
-    email:string;
-    password:string;
+    name : string;
+    phone : number;
+    email : string;
+    password : string;
 }

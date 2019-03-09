@@ -1,24 +1,32 @@
-<div class='container-fluid'>
-  <form [formGroup]='regForm'>
+<div class = 'container-fluid'>
+  <form [ formGroup ] = 'regForm'>
   <div >
-    <label>Username</label>
-    <input type="text" [value]='digital?.name' (input)='digital.name=$event.target.value' formControlName='name' class='form-control' name="name">
+    <label> Username </label>
+    <input type = "text" [ value ] = 'digital?.name'
+     (input) = 'digital.name = $event.target.value' formControlName = 'name'
+      class = 'form-control' name = "name">
   </div>
   <div >
-    <label>mobilenumber</label>
-    <input type="tel" [value]='digital?.phone' (input)='digital.phone=$event.target.value' formControlName='phone' class="form-control" name='phone'>
+    <label> Mobilenumber </label>
+    <input type = "tel" [ value ] = 'digital?.phone' 
+    (input) = 'digital.phone=$event.target.value' formControlName = 'phone' 
+    class = "form-control" name = 'phone'>
   </div>
   <div >
-    <label>email</label>
-    <input type="email" [value]='digital?.email' (input)='digital.email=$event.target.value' formControlName='email' class="form-control" name="email">
+    <label>Email</label>
+    <input type = "email" [ value ] = 'digital?.email' 
+    (input) = 'digital.email = $event.target.value' formControlName = 'email' 
+    class = "form-control" name = "email">
   </div>
   <div >
     <label>password</label>
-    <input type="password" [value]='digital?.password' (input)='digital.password=$event.target.value' formControlName='password' class="form-control" name="password">
+    <input type = "password" [ value ] = 'digital?.password' 
+    (input) = 'digital.password = $event.target.value' formControlName = 'password'
+     class = "form-control" name = "password">
   </div>
   <br/>
-  <button class="btn btn-primary" type="submit" (click)='onSubmit()'>Ok</button>
-  <button class="btn btn-primary ml-2" type="reset">reset</button>
+  <button class = "btn btn-primary" type = "submit" (click) = 'onSubmit()'>Ok</button>
+  <button class = "btn btn-primary ml-2" type = "reset">reset</button>
   
 </form>
 </div>
